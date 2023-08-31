@@ -1,0 +1,125 @@
+<!doctype>
+<html>
+    <head>
+        <title>WEB_WELCOME</title>
+        <meta charset="utf-8">
+        <style>
+            
+        </style>
+        <script>
+        var body={
+            SetBackgroundColor : function (color){
+                document.querySelector('body').style.backgroundColor=color
+            }        ,
+            setColor : function (color){
+                document.querySelector('body').style.color=color
+            } 
+        }
+
+
+
+        function ChangeColor(color){
+            var i=0
+        alist = document.querySelectorAll('a')
+        while(i< alist.length ){
+            if(alist[i].style.color==='purple')
+            {
+                
+            }
+            else
+            {alist[i].style.color=color}
+            i=i+1
+        }
+        }
+
+        function NigthDayHandler(self){
+            if(self.value==='night'){ 
+        body.SetBackgroundColor('black')
+        body.setColor('white')
+        self.value='day'
+        ChangeColor('powderblue')
+       
+        } 
+        else{
+            body.SetBackgroundColor('white')
+            body.setColor('black')
+            self.value='night'
+            ChangeColor('blue')
+        }
+    }
+        </script>
+
+    </head>
+    <body>
+        <h1><a id="chang" href="index.html" target="_blank" onclick="
+            this.style.color='Purple'">WEB</a></h1>
+        <ol>
+            <li><a id="chang" href="Html.html" target="_blank">Html</a></li>
+            <li><a id="'chang"   href="css.html" target="_blank">Css</a></li>
+            <li><a id="'chang"   href="javascript.html" target="_blank">Javascript</a></li>
+        </ol>
+        <h2>WEB brother</h2>
+        <p>
+            웹사이트(Website)는 HTTP 프로토콜을 써서 어
+            떤 URL에서 받아오는 HTML로 쓰인[1] 문서이다.
+        </p>
+        <h1>Program</h1>
+        <script>
+            document.write('1<br>2<br>3<br>4<br>')
+        </script>
+        <h2>if-True</h2>
+        <script>
+            document.write('1<br>')
+            if(true){
+                document.write('2<br>')
+            }
+            else{
+                document.write('3<br>')
+            }
+        </script>
+        <h2>if-False</h2>
+        <script>
+            document.write('2<br>')
+            if(false){
+                document.write('333<br>')
+            }
+            else{
+                document.write('2222<br>')
+            }
+            var coworkers = {
+                "programmer" : "egoing" ,
+                "designer" : "leezche"
+            }
+            document.write('programmer :'+ coworkers['programmer']+'<br>')
+            document.write('designer :'+ coworkers.designer +"<br>")
+            coworkers.bookkeeper = "duru"
+            coworkers["data scientist"]="taeho"
+
+        </script>
+        <input id="night_day"   type="button" value="night" onclick="
+        NigthDayHandler(this)
+        "><br><br>
+
+        <input id="night_day2"   type="button" value="night" onclick="
+        NigthDayHandler(this) ">
+        <script>
+            document.write('<li>1</li>')
+            document.write('<li>1</li>')
+            document.write('<li>1</li>')
+            document.write('<li>1</li>')
+            document.write('<li><a id="chang" href="Html.html" target="_blank">'+'html'+'</a></li>')
+            for(var key in coworkers){
+                document.write(coworkers[key]+'<br>')
+            }
+            coworkers.showAll = function(){
+                for(var key in coworkers){
+                document.write(coworkers[key]+'<br>')
+            }
+            showAll();
+
+            }
+            
+        </script>
+        
+        </body>
+</html>
